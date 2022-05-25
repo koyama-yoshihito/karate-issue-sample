@@ -1,0 +1,35 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.karate-example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation(enforcedPlatform("org.junit:junit-bom:5.8.2"))
+    testImplementation "org.junit.jupiter:junit-jupiter-api"
+    // By upgrading from 1.1.0 to 1.2.0, log masking will not work properly
+    testImplementation "com.intuit.karate:karate-junit5:1.1.0"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
