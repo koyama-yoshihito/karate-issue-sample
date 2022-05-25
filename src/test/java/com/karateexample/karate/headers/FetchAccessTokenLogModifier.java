@@ -2,7 +2,7 @@ package com.karateexample.karate.headers;
 
 import com.intuit.karate.http.HttpLogModifier;
 
-public class GetAccessTokenLogModifier implements HttpLogModifier {
+public class FetchAccessTokenLogModifier implements HttpLogModifier {
 
     @Override
     public boolean enableForUri(String uri) {

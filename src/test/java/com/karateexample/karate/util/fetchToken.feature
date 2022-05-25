@@ -2,7 +2,7 @@
 Feature: FetchToken
 
   Background:
-    * def LM = Java.type('com.karateexample.karate.headers.GetAccessTokenLogModifier')
+    * def LM = Java.type('com.karateexample.karate.headers.FetchAccessTokenLogModifier')
     * configure logModifier = new LM
 
   Scenario: FetchToken

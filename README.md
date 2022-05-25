@@ -39,7 +39,7 @@ BUILD SUCCESSFUL in 1s
 A test report will be created under the `./build/karate-reports` directory.
 
 Open the report.  
-Verify that the header and response are masked when `/token` is accessed since `GetAccessTokenLogModifier` is
+Verify that the header and response are masked when `/token` is accessed since `FetchAccessTokenLogModifier` is
 implemented.  
 ![token](./screenshots/token.png)
 And, verify that the `/hello` header are masked when accessing `/hello` since `LogModifier` is implemented.
